@@ -40,18 +40,10 @@ def beerRefrigerator(n):
 
 # 4번
 def matrixMul(mat1, mat2):
-    r_1,c_1 = len(mat1),len(mat1[0])
-    r_2,c_2 = len(mat2),len(mat2[0])
-    ans = []
-    for i in range(r_1):
-        cal1 = mat1[i]
-        ans_r = []
-        for x in range(c_2):
-            cal2 = [mat2[y][x] for y in range(r_2)]
-            sum = 0
-            for z in range(len(cal1)):
-                sum += cal1[z] * cal2[z]
-            ans_r.append(sum)
-        ans.append(ans_r)
+    ans = [[0 for i in range(len(mat2[0]))] for j in range(len(mat1))]
+    for i in range(len(mat1)):
+        for j in range(len(mat2[0])):
+            for k in range(len(mat1[0])):
+                ans[i][j] += mat1[i][k] * mat2[k][j]
     return ans
 
