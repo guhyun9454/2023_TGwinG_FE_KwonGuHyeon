@@ -29,8 +29,8 @@ def beerRefrigerator(n):
     lst_a = [i for i in range(1,n+1) if n%i == 0]
     b = []
     for a in lst_a:
-        lst_ab = int(n/a)
-        for b in [j for j in range(1,lst_ab+1) if lst_ab%j == 0]:
+        lst_bc = int(n/a)
+        for b in [j for j in range(1,lst_bc+1) if lst_bc%j == 0]:
             if n % (a*b) == 0:
                 c = int(n/(a*b))
                 if min_surface == -1 or min_surface > (a*b+b*c+c*a):
