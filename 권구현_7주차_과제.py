@@ -9,13 +9,6 @@
 # 1번
 def relativeComp(a, b):
     return sorted(list(a-b)) if len(a-b) != 0 else 0
-a = set([2, 5, 11, 7])
-b = set([9, 7, 4])
-print(relativeComp(a, b)) # [2, 5, 11] 출력
-c = set([2, 5, 4])
-d = set([1, 2, 3, 4, 5]) 
-print(relativeComp(c, d)) # 0 출력
-
 # 2번
 def alphabetFreq(word):
     word = word.upper()
@@ -26,5 +19,3 @@ def alphabetFreq(word):
         return ("?")
     else:
         return [i for i,j in table.items() if j == max(table.values())][0]
-
-print(alphabetFreq("aabbe"))
